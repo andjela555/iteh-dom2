@@ -14,7 +14,10 @@ class PlaceFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'theatre_name' => 'Theater of' . $this->faker->name,
+            'address' => $this->faker->address,
+            'room_number' => $this->faker->numberBetween(1, 4),
+            'capacity' => $this->faker->numberBetween(50, 200)
         ];
     }
 }

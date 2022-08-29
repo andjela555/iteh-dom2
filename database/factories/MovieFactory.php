@@ -14,7 +14,10 @@ class MovieFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->catchPhrase,
+            'duration' => $this->faker->numberBetween(40, 140),
+            'plot' => $this->faker->realText,
+            'rating' => $this->faker->randomFloat(2, 1, 10)
         ];
     }
 }

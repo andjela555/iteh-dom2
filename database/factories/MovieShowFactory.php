@@ -14,7 +14,10 @@ class MovieShowFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'start' => $this->faker->dateTime,
+            'price' => $this->faker->numberBetween(100, 1400),
+            'movie_id' => $this->faker->numberBetween(1, 10),
+            'place_id' => $this->faker->numberBetween(1, 10)
         ];
     }
 }
